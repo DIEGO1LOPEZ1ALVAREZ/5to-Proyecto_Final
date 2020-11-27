@@ -29,7 +29,7 @@ switch ($opcion)
         break;
 
         case 2://modificacion
-            $consulta = "UPDATE suppliers SET CompanyName='$CompanyName', ContacName='$ContacName', ContacTitle='$ContacTitle', Address='$Address', City='$City', Region='$Region', PostalCode='$PostalCode', Country='$Country', WHERE supplierID='$supplierID' ";
+            $consulta = "UPDATE suppliers SET CompanyName='$CompanyName', ContacName='$ContacName', ContacTitle='$ContacTitle', Address='$Address', City='$City', Region='$Region', PostalCode='$PostalCode', Country='$Country', WHERE supplierID='$id' ";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
             $data=$resultado->fetchALL(PDO::FETCH_ASSOC);
@@ -42,7 +42,7 @@ switch ($opcion)
         break;
 
         case 4://listar
-            $consulta = "SELECT * FROM suppliers";
+            $consulta = "SELECT supplierID, CompanyName, ContacName, ContacTitle, Address, City, Region, PostalCode, Country, Phone, Fax, HomePage FROM suppliers";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
             $data=$resultado->fetchALL(PDO::FETCH_ASSOC);
