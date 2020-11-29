@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+header{
+	width: 100%;
+	height: 55px;
+	background: #00b386;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.contenedor{
+	width: 100%;
+	height: 55px;
+	margin: auto;
+}
+
+header .contenedor{
+	display: table;
+	display: inline-block;
+}
+
+h1{
+	font-family: 'Patrick Hand', cursive;
+	color: #000;
+}
+
+#logo{
+	position: absolute;
+	border-radius: 50%;
+	width: 165px;
+	height: 165px;
+	align-content: right;
+	margin: 10px;
+}
+
+form{
+	width: 500px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+fieldset{
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #00b386;
+	padding: 0 0 0 40px; 
+}
+
+input, button{
+	position: relative;
+	float: left;
+	width: 400px;
+	height: 35px;
+	padding: 0;
+}
+
+input{
+	border: none;
+	z-index: 2;
+}
+
+button{
+	font-size: 1.4em;
+	width: 50px;
+	border: none;
+	background: #00b386;
+}
+
+.fa-search{
+	color: #bbb;
+	transform: translate(-450px, 0);
+	transition: all .1s ease-in-out;
+}
+
+input:focus {
+	outline: none;
+}
+
+input:focus + button .fa-search{
+	color: #000;
+	transform: translate(0,0);
+	transition-duration: .4s;
+}
+
+#user{
+	display: inline-block;
+	font-size: 35px;
+	float: right;
+	position: relative;
+	padding: 10px;
+	color: #000;
+
+}
+
+#contenedorImg .imagenes{
+	display: inline-block;
+	position: relative;
+}
+
+.imagenes img{
+	margin: 5px;
+	width: 120px;
+	height: 120px;
+}
+
+.fa-shopping-cart{
+	margin: 50px;
+	border-radius: 50%;
+	font-size: 80px;
+}
+
+.fa-database{
+	margin: 50px;
+	border-radius: 50%;
+	font-size: 80px;
+}
+
+.fa-file-signature{
+	margin: 50px;
+	font-size: 80px;
+}
+
+.abajo{
+	margin-left: 50px;
+	display: inline-block;
+	position: relative;
+	background-color: #00b386;
+	border-radius: 100%;
+}
