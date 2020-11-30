@@ -31,23 +31,16 @@
 
 		<!-- Contenedor de imagenes formato carrusel-->
 		<center>
-			<div id="img-prodctos">
-				<!-- Imaganes -->
-				<div class="fila">
-					<!-- Asignando la funcion en js a una etiqueta para llamar a la funcion y abrir la ventana flotante-->
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG1.jpg" class="img1" id="1"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG2.jpg" class="img2" id="2"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG3.jpg" class="img2" id="3"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG4.jpg" class="img3" id="4"></a>
-				</div>
-				<div class="fila">
-					<!-- Asignando la funcion en js a una etiqueta para llamar a la funcion y abrir la ventana flotante-->
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG1.jpg" class="img1" id="1"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG2.jpg" class="img2" id="2"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG3.jpg" class="img2" id="3"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG4.jpg" class="img3" id="4"></a>
-				</div>
-			</div>
+		<div id="img-prodctos">
+			<!-- Imaganes -->
+			<div class="fila">
+				<!-- Asignando la funcion en js a las etiquetas <a> para llamar a la funcion y abrir la ventana flotante-->
+        		<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG1.jpg" class="img1" id="1"></a>
+				<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG2.jpg" class="img2" id="2"></a>
+				<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG3.jpg" class="img2" id="3"></a>
+				<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG4.jpg" class="img3" id="4"></a>
+			</div>		
+		</div>
 		</center>
 
 		<!-- Ventana flotante -->
