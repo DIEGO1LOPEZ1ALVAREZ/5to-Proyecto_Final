@@ -1,0 +1,69 @@
+/* Contenedor principal de las imagenes */
+#img-prodctos{
+    text-align: center;
+    background: rgb(231, 231, 231);
+    padding-top: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+    height: 490px;
+    padding-top: 50px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+/* Orden de filas */
+.fila{
+    display: flex;
+}
+
+.fila a{
+    padding-left: 30px;
+}
+
+/* Diseño para las imagemes */
+.img1{
+    padding-top: 40px;
+    padding-left: 60px;
+    cursor: pointer;
+    width: 380px;
+    height: 370px;
+    border-image: 10px #000;
+}
+
+.img2{
+    padding-top: 40px;
+    padding-left: 20px;
+    cursor: pointer;
+    width: 380px;
+    height: 370px;
+}
+
+.img3{
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 30px;
+    cursor: pointer;
+    width: 380px;
+    height: 370px;
+}
+
+/* Estilo de la ventana flotante oculta al momento */
+.ven-producto{
+    display: none;
+    opacity: 95%;
+    width: 1550px;
+    height: 1000px;
+    background: #ddd;
+    position: absolute;
+    left: 180px;
+    top: 50px;
+}
+
+#cerrar{
+    color: #00b386;
+    text-decoration: none;
+    font-size: 2em;
+    padding-left: 20px;
+    padding-top: 20px;
+}
