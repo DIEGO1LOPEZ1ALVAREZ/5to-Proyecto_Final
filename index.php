@@ -27,20 +27,35 @@
 		</header>
 
 		<br><br><br><br><br><br><br><br> 
-
+		<!--Carrousel-->
 		<!-- Contenedor de imagenes formato carrusel-->
 		<center>
-			<div id="img-prodctos">
-				<!-- Imaganes -->
-				<div class="fila">
-					<!-- Asignando la funcion en js a las etiquetas <a> para llamar a la funcion y abrir la ventana flotante-->
-        			<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG1.jpg" class="img1" id="1"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG2.jpg" class="img2" id="2"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG3.jpg" class="img2" id="3"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG4.jpg" class="img3" id="4"></a>
-				</div>		
+		<div id="img-prodctos">
+				<!-- Asignando la funcion en js a las etiquetas <a> para llamar a la funcion y abrir la ventana flotante-->
+				<div class="slide hi-slide">
+				     <div class="hi-prev"></div>
+				     	<div class="hi-next"></div>	
+				          <ul>
+				            <!-- imagenes -->
+				            <li><a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG1.jpg" class="img1" id="1"></a></li>
+
+				            <li><a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG2.jpg" class="img2" id="2"></a></li>
+
+				            <li><a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG3.jpg" class="img2" id="3"></a></li>
+				            
+				            <li><a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG4.jpg" class="img3" id="4"></a></li>
+				          </ul>	        				
+				</div>
 			</div>
-		</center>
+			</center>
+
+			<!--Llama al js para el carrusel-->
+			<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+			<script type="text/javascript" src="JS/jquery.hislide.js" ></script>
+			<script>
+				$('.slide').hiSlide();
+			</script>
+
 
 		<!-- Ventana flotante -->
 		<div class="ven-producto" id="flotante">
