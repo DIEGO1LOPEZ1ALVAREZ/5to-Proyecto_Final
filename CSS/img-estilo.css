@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 /* Contenedor principal de las imagenes */
 #img-prodctos{
     text-align: center;
@@ -48,22 +53,33 @@
     height: 370px;
 }
 
-/* Estilo de la ventana flotante oculta al momento */
+/* Estilo de la ventana flotante */
 .ven-producto{
     display: none;
-    opacity: 95%;
     width: 1550px;
-    height: 1000px;
-    background: #ddd;
+    height: 800px;
     position: absolute;
     left: 180px;
-    top: 50px;
+    top: 100px;
+    background: #fff;
+    border: 5px solid rgb(231, 231, 231);
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    padding-top: 0px;
+    padding-left: 30px;
+    font-size: 3em;
+}
+
+/* Contenido de la ventana flotante */
+.ven-producto a{
+    padding-left: 97%;
+    font-size: 1em;
 }
 
 #cerrar{
     color: #00b386;
     text-decoration: none;
     font-size: 2em;
-    padding-left: 20px;
-    padding-top: 20px;
+    padding-top: 50px;
+    font-size: 1em;
 }
