@@ -25,35 +25,41 @@
 				</form>
 			</div>
 		</header>
-
-		<br><br><br><br><br><br><br><br> 
-
-		<!-- Contenedor de imagenes formato carrusel-->
-		<center>
-			<div id="img-prodctos">
-				<!-- Imaganes -->
-				<div class="fila">
-					<!-- Asignando la funcion en js a las etiquetas <a> para llamar a la funcion y abrir la ventana flotante-->
-        			<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG1.jpg" class="img1" id="1"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG2.jpg" class="img2" id="2"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG3.jpg" class="img2" id="3"></a>
-					<a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG4.jpg" class="img3" id="4"></a>
-				</div>		
+		
+		<!-- Imagenes -->
+		<div class="imagenes">
+			<div class="fila1">
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG1.jpg" alt="" id="1">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG2.jpg" alt="" id="2">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG3.jpg" alt="" id="3">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG4.jpg" alt="" id="4">
+				</div>
+			</div><br>
+			<div class="fila1">
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG1.jpg" alt="" id="1">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG2.jpg" alt="" id="2">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG3.jpg" alt="" id="3">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG4.jpg" alt="" id="4">
+				</div>
 			</div>
-		</center>
-
-		<!-- Ventana flotante -->
-		<div class="ven-producto" id="flotante">
-			<!-- Asignando la funcion en js a una etiqueta para llamar a la funcion y cerrar la ventana flotante-->
-			<a href="javascript:cerrar();" id="cerrar">x</a><br>
-			<div class="s-img">
-				
-			</div>
-		</div>
-
+        </div>
+		
 		<!-- Archivos JS -->
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 		<script src="JS/estilo-index.js"></script>
-
 	</body>
 </html>
