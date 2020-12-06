@@ -57,6 +57,38 @@
 			</script>
 
 
+		<!-- Imagenes -->
+		<div class="imagenes">
+			<div class="fila1">
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG1.jpg" alt="" id="1">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG2.jpg" alt="" id="2">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG3.jpg" alt="" id="3">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG4.jpg" alt="" id="4">
+				</div>
+			</div><br>
+			<div class="fila1">
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG1.jpg" alt="" id="1">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG2.jpg" alt="" id="2">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG3.jpg" alt="" id="3">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG4.jpg" alt="" id="4">
+				</div>
+			</div>
+        </div>
+
 		<!-- Ventana flotante -->
 		<div class="ven-producto" id="flotante">
 			<!-- Asignando la funcion en js a una etiqueta para llamar a la funcion y cerrar la ventana flotante-->
