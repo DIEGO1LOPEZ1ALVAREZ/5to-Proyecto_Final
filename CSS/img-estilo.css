@@ -1,26 +1,85 @@
-/* Contenedor de imagenes*/
-.imagenes{
-    position: absolute;
-    width: auto;
-    height: auto;
-    left: 47px;
-    top: 210px;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+/* Contenedor principal de las imagenes */
+#img-prodctos{
+    text-align: center;
+    background: rgb(231, 231, 231);
+    padding-top: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+    height: 510px;
+    padding-top: 50px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
-/* Para ordenar imagenes rn una fila */
-.fila1{
+/* Orden de filas */
+.fila{
     display: flex;
 }
 
-/* Imagenes individuales */
-.img{
-    border: 2px solid #00b386;
-    padding: 20px;
-    margin-right: 40px;
-    height: 600px;
+.fila a{
+    padding-left: 30px;
 }
 
-.img img{
-    width: 382px;
-    height: 382px;
+/* Diseño para las imagemes */
+.img1{
+    padding-top: 40px;
+    padding-left: 60px;
+    cursor: pointer;
+    width: 380px;
+    height: 370px;
+    border-image: 10px #000;
+}
+
+.img2{
+    padding-top: 40px;
+    padding-left: 20px;
+    cursor: pointer;
+    width: 380px;
+    height: 370px;
+}
+
+.img3{
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 30px;
+    cursor: pointer;
+    width: 380px;
+    height: 370px;
+}
+
+/* Estilo de la ventana flotante */
+.ven-producto{
+    display: none;
+    width: 1550px;
+    height: 800px;
+    position: absolute;
+    left: 180px;
+    top: 100px;
+    background: #fff;
+    border: 5px solid rgb(231, 231, 231);
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    padding-top: 0px;
+    padding-left: 30px;
+    font-size: 3em;
+}
+
+/* Contenido de la ventana flotante */
+.ven-producto a{
+    padding-left: 97%;
+    font-size: 1em;
+}
+
+#cerrar{
+    color: #00b386;
+    text-decoration: none;
+    font-size: 2em;
+    padding-top: 50px;
+    font-size: 1em;
 }
