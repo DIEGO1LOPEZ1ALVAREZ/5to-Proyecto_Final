@@ -83,3 +83,31 @@ body{
     padding-top: 50px;
     font-size: 1em;
 }
+
+/* Catalogo de imagenes*/
+/* Contenedor de imagenes*/
+.imagenes{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 47px;
+    top: 800px;
+}
+
+/* Para ordenar imagenes rn una fila */
+.fila1{
+    display: flex;
+}
+
+/* Imagenes individuales */
+.img{
+    border: 2px solid #00b386;
+    padding: 20px;
+    margin-right: 40px;
+    height: 600px;
+}
+
+.img img{
+    width: 382px;
+    height: 382px;
+}
