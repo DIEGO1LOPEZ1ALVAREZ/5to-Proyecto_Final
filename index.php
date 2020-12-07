@@ -50,8 +50,9 @@
 			</center>
 
 		<div class="menu">
-			<a href="">Beverages</a>
-			<a href="">Condiments</a>
+			<!-- Cada uno de estas etiquetas, aparece su respectiva categoria y manda llamar al archivo estilo-index.js -->
+			<a href="javascript: mostrarBeverages();">Beverages</a>
+			<a href="javascript: mostrarCondiments();">Condiments</a>
 			<a href="">Confections</a>
 			<a href="">Dairy Products</a>
 			<a href="">Grains / Cereals</a>
@@ -69,7 +70,7 @@
 
 		<!-- QUEDA PENTIENTE DE COLOCAR LA PARTE DE IMAGENES EN OTRO ARCHIVO PARA OPTIMIZARLO -->
 		<!-- Imagenes -->
-		<div class="imgBeverages">
+		<div class="imgBeverages" id="imgBeverages">
 			<div class="fila1">
 				<div class="img">
 					<img src="IMG-PRODUCTOS/IMG1.jpg" alt="" id="1">
@@ -112,7 +113,52 @@
 					<img src="IMG-PRODUCTOS/IMG76.jpg" alt="" id="4">
 				</div>
 			</div><br>
-        </div>
+		</div>
+		
+		<div class="imgCondiments" id="imgCondiments">
+			<div class="fila1">
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG3.jpg" alt="" id="3">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG4.jpg" alt="" id="4">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG5.jpg" alt="" id="5">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG6.jpg" alt="" id="6">
+				</div>
+			</div><br>
+			<div class="fila1">
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG8.jpg" alt="" id="8">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG15.jpg" alt="" id="15">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG44.jpg" alt="" id="44">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG61.jpg" alt="" id="61">
+				</div>
+			</div><br>
+			<div class="fila1">
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG63.jpg" alt="" id="63">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG65.jpg" alt="" id="65">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG66.jpg" alt="" id="66">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG77.jpg" alt="" id="77">
+				</div>
+			</div><br>
+		</div>
 
 		<!-- Archivos JS -->
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>

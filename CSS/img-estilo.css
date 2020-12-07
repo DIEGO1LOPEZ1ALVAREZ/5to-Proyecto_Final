@@ -49,8 +49,18 @@ body{
 }
 
 /* Catalogo de imagenes*/
-/* Contenedor de imagenes*/
+/* Contenedor de imagenes de cada categoria*/
 .imgBeverages{
+    display: none;
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 47px;
+    top: 900px;
+}
+
+.imgCondiments{
+    display: none;
     position: absolute;
     width: auto;
     height: auto;
