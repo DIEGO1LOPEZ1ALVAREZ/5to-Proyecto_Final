@@ -49,6 +49,17 @@
 			</div>
 			</center>
 
+		<div class="menu">
+			<a href="">Beverages</a>
+			<a href="">Condiments</a>
+			<a href="">Confections</a>
+			<a href="">Dairy Products</a>
+			<a href="">Grains / Cereals</a>
+			<a href="">Meat / Poultry</a>
+			<a href="">Produce</a>
+			<a href="">Seafood</a>
+		</div>
+
 			<!--Llama al js para el carrusel-->
 			<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 			<script type="text/javascript" src="JS/jquery.hislide.js" ></script>
@@ -56,9 +67,9 @@
 				$('.slide').hiSlide();
 			</script>
 
-
+		<!-- QUEDA PENTIENTE DE COLOCAR LA PARTE DE IMAGENES EN OTRO ARCHIVO PARA OPTIMIZARLO -->
 		<!-- Imagenes -->
-		<div class="imagenes">
+		<div class="imgBeverages">
 			<div class="fila1">
 				<div class="img">
 					<img src="IMG-PRODUCTOS/IMG1.jpg" alt="" id="1">
@@ -67,36 +78,41 @@
 					<img src="IMG-PRODUCTOS/IMG2.jpg" alt="" id="2">
 				</div>
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG3.jpg" alt="" id="3">
+					<img src="IMG-PRODUCTOS/IMG24.jpg" alt="" id="3">
 				</div>
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG4.jpg" alt="" id="4">
+					<img src="IMG-PRODUCTOS/IMG34.jpg" alt="" id="4">
 				</div>
 			</div><br>
 			<div class="fila1">
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG1.jpg" alt="" id="1">
+					<img src="IMG-PRODUCTOS/IMG35.jpg" alt="" id="1">
 				</div>
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG2.jpg" alt="" id="2">
+					<img src="IMG-PRODUCTOS/IMG38.jpg" alt="" id="2">
 				</div>
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG3.jpg" alt="" id="3">
+					<img src="IMG-PRODUCTOS/IMG39.jpg" alt="" id="3">
 				</div>
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG4.jpg" alt="" id="4">
+					<img src="IMG-PRODUCTOS/IMG43.jpg" alt="" id="4">
 				</div>
-			</div>
+			</div><br>
+			<div class="fila1">
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG67.jpg" alt="" id="1">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG70.jpg" alt="" id="2">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG75.jpg" alt="" id="3">
+				</div>
+				<div class="img">
+					<img src="IMG-PRODUCTOS/IMG76.jpg" alt="" id="4">
+				</div>
+			</div><br>
         </div>
-
-		<!-- Ventana flotante -->
-		<div class="ven-producto" id="flotante">
-			<!-- Asignando la funcion en js a una etiqueta para llamar a la funcion y cerrar la ventana flotante-->
-			<a href="javascript:cerrar();" id="cerrar">x</a><br>
-			<div class="s-img">
-				
-			</div>
-		</div>
 
 		<!-- Archivos JS -->
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>

@@ -6,88 +6,56 @@ body{
 /* Contenedor principal de las imagenes */
 #img-prodctos{
     text-align: center;
-    background: rgb(231, 231, 231);
     padding-top: 0px;
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 5px;
     height: 510px;
-    /*padding-top: 50px;*/
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
-/* Orden de filas */
-/*
-.fila{
-    display: flex;
-}
-
-.fila a{
-    padding-left: 30px;
-}
-*/
-/* Diseño para las imagemes */
 .img1{
-    
     cursor: pointer;
     width: 100%;
     height: 100%;
 }
 
 .img2{
-   
     cursor: pointer;
     width: 100%;
     height: 100%;
 }
 
 .img3{
-   
     cursor: pointer;
     width: 100%;
     height: 100%;
 }
 
-/* Estilo de la ventana flotante */
-.ven-producto{
-    display: none;
-    width: 1550px;
-    height: 800px;
-    position: absolute;
-    left: 180px;
-    top: 100px;
-    background: #fff;
-    border: 5px solid rgb(231, 231, 231);
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-    padding-top: 0px;
-    padding-left: 30px;
-    font-size: 3em;
+/* Menu*/
+.menu{
+    display: flex;
+    margin-left: 33px;
 }
 
-/* Contenido de la ventana flotante */
-.ven-producto a{
-    padding-left: 97%;
-    font-size: 1em;
-}
-
-#cerrar{
-    color: #00b386;
+.menu a{
     text-decoration: none;
+    color: #000;
+    padding-left: 50px;
     font-size: 2em;
-    padding-top: 50px;
-    font-size: 1em;
+}
+
+.menu a:hover{
+    color: #00b386;
 }
 
 /* Catalogo de imagenes*/
 /* Contenedor de imagenes*/
-.imagenes{
+.imgBeverages{
     position: absolute;
     width: auto;
     height: auto;
     left: 47px;
-    top: 800px;
+    top: 900px;
 }
 
 /* Para ordenar imagenes rn una fila */
@@ -97,7 +65,7 @@ body{
 
 /* Imagenes individuales */
 .img{
-    border: 2px solid #00b386;
+    border: 2px solid #000;
     padding: 20px;
     margin-right: 40px;
     height: 600px;
