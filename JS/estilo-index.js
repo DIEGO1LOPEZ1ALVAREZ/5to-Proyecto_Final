@@ -1,10 +1,15 @@
-//Crear la función para aparecer la ventana flotante de info
-function mostrar(){
-    //Tomar el valor del div por medio su id
-    //Se usa .style.display="block" para llamar a la hoja de estilos CSS y modificar codigo
-    document.getElementById("flotante").style.display="block";
+/*
+    Las siguientes funciones, tratan de lo mismo. Se crea una funcion con el nombre
+    de la categoria a mostrar, dentro de ella, se toma el valor de dicha categoria y se hace vivisible 
+    por medio de una etiqueta <a> en el codigo HTML que es la que llama a la funcion
+*/
+
+function mostrarBeverages(){
+    document.getElementById("imgBeverages").style.display="block";
+    document.getElementById("imgCondiments").style.display="none";
 }
-//Se repite la funcion pero esta vez para cerrar
-function cerrar(){
-    document.getElementById("flotante").style.display="none";
+
+function mostrarCondiments(){
+    document.getElementById("imgCondiments").style.display="block";
+    document.getElementById("imgBeverages").style.display="none";
 }
