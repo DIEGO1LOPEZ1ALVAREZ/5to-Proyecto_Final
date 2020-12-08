@@ -3,21 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="CSS//reportes_emp.css">
-        <title>Report Employees</title>
-    </head>
+        <link rel="stylesheet" href="CSS/reporte_pro.css">
+        <title>Report Products</title>
+</head>
     <body>
-        <center><h1>E M P L O Y E E S</h1></center>
-        <hr class="inicio"><br>
-        <div class="tit">
+        <center><h1>P R O D U C T S</h1></center>
+            <hr class="inicio"><br>
+            <div class="tit">
             <table>
                 <tr>
                     <td class="tdId">Id</td>
-                    <td class="tdTitle">Title</td>
-                    <td class="tdName">Name</td>
-                    <td class="tdCountry">Country</td>
-                    <td class="tdOrder">Orders</td>
-                    <td class="tdAmount">Amount</td>
+                    <td class="tdproName">Name</td>
+                    <td class="tdPrice">Unit Price</td>
+                    <td class="tdStock">Unit Stock</td>
+                    <td class="tdcatName">Category Name</td>
+                    <td class="tdCantidad">Amount</td>
+                    <td class="tdMonto">Total</td>
                 </tr>
             </table>
         </div>
@@ -49,16 +50,18 @@
 			mysqli_set_charset($conexion, "utf8");
 
 			//Se crea una variable que indica cual sera la consulta para mostrar los datos
-			$consulta = "SELECT e.employeeid, e.title, concat(e.firstname, ' ', e.lastname) as Nombre, e.country,
+			$consulta = "SELECT p.productid, p.productname, p.unitprice, p.unitsinstock, c.categoryname,
             (
-                select count(*) from orders o where o.employeeid=e.employeeid
-            ) as Ordenes,
+                SELECT count(*) FROM `order details` od JOIN orders o ON o.OrderID=od.OrderID
+                WHERE p.ProductID=od.ProductID
+            ) Cantidad,
             (
-                select round( sum(od.quantity*od.unitprice - od.quantity*od.unitprice*od.Discount), 2)
-                from `order details` od join orders o
-                on o.orderid=od.orderid where o.EmployeeID=e.employeeid
-            ) as Monto
-            FROM employees e;";
+                SELECT round(sum(od.unitprice*od.Quantity-od.unitprice*od.Quantity*od.Discount), 2)
+                FROM `order details` od JOIN orders o ON o.OrderID=od.OrderID
+                WHERE p.ProductID=od.ProductID
+            ) AS Monto
+            FROM products p JOIN categories c ON p.CategoryID=c.CategoryID
+            ORDER BY ProductID;";
 
 			//Se crea una variable en donde va a almacenar toda la informacion de la base de datos, con su respectiva conexión
 			$resultados = mysqli_query($conexion, $consulta);
@@ -69,23 +72,27 @@
 				echo "<center><div class='datos'><table><tr><td class='id'>";
 
                 //Imprime la información de la BD, indicando que posición en la que se encuentra dicha información
-                echo $fila[0] . "</td><td class='titulo'> ";
+                echo $fila[0] . "</td><td class='proName'> ";
 
                 //Imprime la información de la BD, indicando que posición en la que se encuentra dicha información
-                echo $fila[1] . "</td><td class='nombre'> ";
+                echo $fila[1] . "</td><td class='price'> ";
 
                 //Imprime la información de la BD, indicando que posición en la que se encuentra dicha información
-                echo $fila[2] . "</td><td class='pais'> ";
+                echo $fila[2] . "</td><td class='stock'> ";
 
                 //Imprime la información de la BD, indicando que posición en la que se encuentra dicha información
-                echo $fila[3] . "</td><td class='ordenes'> ";
+                echo $fila[3] . "</td><td class='catName'> ";
 
                 //Imprime la información de la BD, indicando que posición en la que se encuentra dicha información
-                echo $fila[4] . "</td><td class='monto'> ";
+                echo $fila[4] . "</td><td class='cantidad'> ";
 
                 //Imprime la información de la BD, indicando que posición en la que se encuentra dicha información
-                echo $fila[5] . "</td></tr></table></div></center>";
+                echo $fila[5] . "</td><td class='monto'> ";
+
+                //Imprime la información de la BD, indicando que posición en la que se encuentra dicha información
+                echo $fila[6] . "</td></tr></table></div></center>";
 			}
         ?>
+        <br>
     </body>
 </html>
