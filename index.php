@@ -51,6 +51,7 @@
 
 		<div class="menu">
 			<!-- Cada uno de estas etiquetas, aparece su respectiva categoria y manda llamar al archivo estilo-index.js -->
+			<script src="JS/estiloIndex.js"></script>
 			<a href="javascript: mostrarBeverages();">Beverages</a>
 			<a href="javascript: mostrarCondiments();">Condiments</a>
 			<a href="javascript: mostrarConfections();">Confections</a>
@@ -78,7 +79,7 @@
 					<img src="IMG-PRODUCTOS/IMG2.jpg" alt="" id="2">
 				</div>
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG24.jpg" alt="" id="3">
+					<img src="IMG-PRODUCTOS/IMG24.jpg" alt="" id="24">
 				</div>
 				<div class="img">
 					<img src="IMG-PRODUCTOS/IMG34.jpg" alt="" id="4">
@@ -159,22 +160,23 @@
 					<img src="IMG-PRODUCTOS/IMG77.jpg" alt="" id="77">
 				</div>
 			</div><br>
+		</div>
 
 
 
-			<div class="imgConfections" id="imgConfections">
+		<div class="imgConfections" id="imgConfections">
 			<div class="fila1">
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG16.jpg" alt="" id="16">
+					<img src="IMG-PRODUCTOS/IMG16.jpg" alt="" id="1">
 				</div>
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG19.jpg" alt="" id="19">
+					<img src="IMG-PRODUCTOS/IMG19.jpg" alt="" id="2">
 				</div>
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG20.jpg" alt="" id="20">
+					<img src="IMG-PRODUCTOS/IMG20.jpg" alt="" id="3">
 				</div>
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG21.jpg" alt="" id="21">
+					<img src="IMG-PRODUCTOS/IMG21.jpg" alt="" id="4">
 				</div>
 			</div><br>
 			<div class="fila1">
@@ -347,13 +349,13 @@
 					<img src="IMG-PRODUCTOS/IMG37.jpg" alt="" id="37">
 				</div>
 				<div class="img">
-					<img src="IMG-PRODUCTOS/IMG740.jpg" alt="" id="40">
+					<img src="IMG-PRODUCTOS/IMG40.jpg" alt="" id="40">
 				</div>
 			</div><br>
 		</div>
 		<!-- Archivos JS -->
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-		<script src="JS/estilo-index.js"></script>
+		
 
 	</body>
 </html>
