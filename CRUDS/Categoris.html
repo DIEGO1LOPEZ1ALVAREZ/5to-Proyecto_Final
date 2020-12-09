@@ -17,36 +17,17 @@
 		<table border="1">
 			<thead>
 				<tr>
-					<th>SupplierID</th>
-					<th>CompanyName</th>
-					<th>ContacName</th>
-					<th>ContacTitle</th>
-					<th>Address</th>
-					<th>City</th>
-					<th>Region</th>
-					<th>PostalCode</th>
-					<th>Country</th>
-					<th>Phone</th>
-					<th>Fax</th>
-					<th>HomePage</th>
+					<th>CategoriID</th>
+					<th>CategoriName</th>
+					<th>Description</th>
 				</tr>
 			</thead>
 
 			<tbody>
-				<tr v-for="supplier of Suppliers">
-					<td>{{supplier.SupplierID}}</td>
-					<td>{{supplier.CompanyName}}</td>
-					<td>{{supplier.ContacName}}</td>
-					<td>{{supplier.ContacTitle}}</td>
-					<td>{{supplier.Address}}</td>
-					<td>{{supplier.City}}</td>
-					<td>{{supplier.Region}}</td>
-					<td>{{supplier.PostalCode}}</td>
-					<td>{{supplier.Country}}</td>
-					<td>{{supplier.Phone}}</td>
-					<td>{{supplier.Fax}}</td>
-					<td>{{supplier.HomePage}}</td>
-					
+				<tr v-for="categori of Categories">
+					<td>{{categori.CategoriId}}</td>
+					<td>{{categori.CategoriName}}</td>
+					<td>{{categori.Description}}</td>
 					<td>
 						<input type="button" value="editar" @click="btnEditar(customer.CustomerID, customer.CompanyName, customer.ContactName, customer.ContactTitle, customer.Address, customer.City, customer.Region, customer.PostalCode, customer.Country, customer.Phone, customer.Fax)">
 						<input type="button" value="borrar" @click="btnBorrar(customer.CustomerID)">
@@ -72,6 +53,6 @@
 	<!--Sweetalert 2-->
 	<script src="plugins/sweetaler2/sweetalert2.all.min.js"></script>
 
-	<script type="text/javascript" src="Suppliers.js"></script>
+	<script type="text/javascript" src="Categori.js"></script>
 </body>
 </html>
