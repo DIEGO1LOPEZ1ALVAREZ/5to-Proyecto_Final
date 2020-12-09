@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+    font-size: 3em;
+}
+/* Contenedor */
+.datos{
+    background: #cbfaee;
+    width: 1350px;
+    text-align: justify;
+    font-size: 1.7em;
+}
+
+/* <hr>*/
+.inicio{
+    width: 50%;
+}
+
+/* Menu */
+.tit{
+    display: flex;
+    margin-left: 14.2%;
+}
+.tit p{
+    padding-left: 500px;
+}
+
+/* columna id */
+.tdId{
+    font-size: 2em;
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    background: #00b386;
+}
+
+.id{
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    background: #e3f5f0;
+}
+
+/* Columna nombre */
+.tdproName{
+    text-align: center;
+    width: 410px;
+    background: #00b386;
+    font-size: 2em;
+}
+
+.proName{
+    text-align: justify;
+    width: 420px;
+    background: #e3f5f0;
+}
+
+/* Columna de Precios */
+.price{
+    text-align: center;
+    width: 200px;
+    background: #e3f5f0;
+}
+.tdPrice{
+    text-align: center;
+    width: 200px;
+    background: #00b386;
+    font-size: 2em;
+}
+
+/* Columna Stock */
+.stock{
+    text-align: center;
+    width: 100px;
+    background: #e3f5f0;
+}
+
+.tdStock{
+    text-align: center;
+    width: 100px;
+    background: #00b386;
+    font-size: 2em;
+}
+
+/* Columna Nombre de Categoria */
+.catName{
+    text-align: justify;
+    width: 225px;
+    background: #e3f5f0;
+}
+
+.tdcatName{
+    text-align: center;
+    width: 225px;
+    background: #00b386;
+    font-size: 2em;
+}
+
+/* Columna Cantidad */
+.cantidad{
+    text-align: center;
+    width: 110px;
+    background: #e3f5f0; 
+}
+
+.tdCantidad{
+    text-align: center;
+    width: 110px;
+    background: #00b386;
+    font-size: 2em;
+}
+
+/* Cantidad total */
+.monto{
+    text-align: center;
+    width: 175px;
+    background: #e3f5f0;
+}
+.tdMonto{
+    text-align: center;
+    width: 174px;
+    background: #00b386;
+    font-size: 2em; 
+}
