@@ -365,7 +365,20 @@
 		</div>
 		<!-- Archivos JS -->
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-		
+		<fieldset>
+			<a href="CRUDS/customers.php">CRUD CUSTOMERS</a>
+			<br>
+			<a href="CRUDS/employes.php">CRUD EMPLOYES</a>
+			<br>
+			<a href="CRUDS/shippers.php">CRUD SHIPPERS</a>
+			<br>
+			<a href="CRUDS/Crudcategories.php">CRUD CATEGORIES</a>
+			<br>
+			<a href="CRUDS/Crudproducts.php">CRUD PRODUCTOS</a>
+			<br>
+			<a href="CRUDS/Crudsuppliers.php">CRUD SUPPLIERS</a>
+
+		</fieldset>
 
 	</body>
 </html>
