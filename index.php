@@ -4,8 +4,7 @@
 		<title>Lucky Aide</title>
 		<meta charset="utf-8">
 		<!-- Archivos CSS -->
-		<link rel="stylesheet" href="CSS/img-estilo.css">
-		<link rel="stylesheet" type="text/css" href="CSS//estilo-index.css">
+		<link rel="stylesheet" href="CSS/imagenes.css">
 		<link rel="stylesheet" href="CSS/estilo-index.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
@@ -365,7 +364,7 @@
 		</div>
 		<!-- Archivos JS -->
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-		<fieldset>
+		<!--<fieldset>
 			<a href="CRUDS/customers.php">CRUD CUSTOMERS</a>
 			<br>
 			<a href="CRUDS/employes.php">CRUD EMPLOYES</a>
@@ -378,7 +377,7 @@
 			<br>
 			<a href="CRUDS/Crudsuppliers.php">CRUD SUPPLIERS</a>
 
-		</fieldset>
+		</fieldset>-->
 
 	</body>
 </html>
