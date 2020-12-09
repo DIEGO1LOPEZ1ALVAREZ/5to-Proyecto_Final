@@ -6,15 +6,18 @@
 
 	<!--Sweet Alert 2-->
 	<link rel="stylesheet" href="plugins/sweetaler2/sweetalert2.min.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/estilo_cruds.css">
 	<title>Employes</title>
 </head>
 
 <body>
 
+	<center><h1>E M P L O Y E S</h1></center>
+	<hr class="inicio"><br>
 	<div id="appEmployees">
-		<input type="button" value="Agregar!" @click="btnAlta">
+		<input type="button" value="Agregar!" @click="btnAlta"class="btnAgregar">
 
-		<table border="1">
+		<table>
 			<thead>
 				<tr>
 					<th>EmployeeID</th>
@@ -55,9 +58,9 @@
 					<td>{{employee.Notes}}</td>
 					<td>{{employee.ReportsTo}}</td>
 
-					<td>
-						<input type="button" value="editar" @click="btnEditar(employee.EmployeeID, employee.LastName, employee.FirstName, employee.Title, employee.TitleOfCourtesy, employee.BirthDate, employee.HireDate, employee.Address, employee.City, employee.Region, employee.PostalCode, employee.Country, employee.HomePhone, employee.Extension, employee.Notes, employee.ReportsTo)">
-						<input type="button" value="borrar" @click="btnBorrar(employee.EmployeeID)">
+					<td><center>
+						<input type="button" value="editar" @click="btnEditar(employee.EmployeeID, employee.LastName, employee.FirstName, employee.Title, employee.TitleOfCourtesy, employee.BirthDate, employee.HireDate, employee.Address, employee.City, employee.Region, employee.PostalCode, employee.Country, employee.HomePhone, employee.Extension, employee.Notes, employee.ReportsTo)" class="btnEditar">
+						<input type="button" value="borrar" @click="btnBorrar(employee.EmployeeID)"class="btnBorrar"></center>
 					</td>
 				</tr>
 			</tbody>
