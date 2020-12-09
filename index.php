@@ -26,7 +26,7 @@
 			</div>
 		</header>
 
-		<br><br><br><br><br><br><br><br> 
+		<br><br><br>
 		<!--Carrousel-->
 		<!-- Contenedor de imagenes formato carrusel-->
 		<center>
@@ -46,9 +46,9 @@
 				            <li><a href="javascript:mostrar();"><img src="IMG-PRODUCTOS/IMG4.jpg" class="img3" id="4"></a></li>
 				          </ul>	        				
 				</div>
-			</div>
-			</center>
-
+		</div>
+		</center>
+			<center>
 		<div class="menu">
 			<!-- Cada uno de estas etiquetas, aparece su respectiva categoria y manda llamar al archivo estilo-index.js -->
 			<script src="JS/estiloIndex.js"></script>
@@ -58,9 +58,12 @@
 			<a href="javascript: mostrarDairyProducts();">Dairy Products</a>
 			<a href="javascript: mostrarCereals();">Grains / Cereals</a>
 			<a href="javascript: mostrarMeat();">Meat / Poultry</a>
-			<a href="javascript: mostrarProduce();">Produce</a>
-		</div>
+			<a href="javascript: mostrarProduce();">Produce</a>	
 
+		</div>
+			
+			
+<br><br><br>
 			<!--Llama al js para el carrusel-->
 			<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 			<script type="text/javascript" src="JS/jquery.hislide.js" ></script>
@@ -71,6 +74,7 @@
 		<!-- QUEDA PENTIENTE DE COLOCAR LA PARTE DE IMAGENES EN OTRO ARCHIVO PARA OPTIMIZARLO -->
 		<!-- Imagenes -->
 		<div class="imgBeverages" id="imgBeverages">
+			<h1>Beverages</h1>
 			<div class="fila1">
 				<div class="img">
 					<img src="IMG-PRODUCTOS/IMG1.jpg" alt="" id="1">
@@ -118,6 +122,7 @@
 
 
 		<div class="imgCondiments" id="imgCondiments">
+			<h1>Condiments</h1>
 			<div class="fila1">
 				<div class="img">
 					<img src="IMG-PRODUCTOS/IMG3.jpg" alt="" id="3">
@@ -164,7 +169,8 @@
 
 
 
-		<div class="imgConfections" id="imgConfections">
+		<div class="imgBeverages" id="imgConfections">
+			<h1>Confections</h1>
 			<div class="fila1">
 				<div class="img">
 					<img src="IMG-PRODUCTOS/IMG16.jpg" alt="" id="1">
@@ -211,7 +217,8 @@
 
 
 
-		<div class="imgDairyProducts" id="imgDairyProducts">
+		<div class="imgBeverages" id="imgDairyProducts">
+			<h1>Dairy Products</h1>
 			<div class="fila1">
 				<div class="img">
 					<img src="IMG-PRODUCTOS/IMG11.jpg" alt="" id="11">
@@ -252,7 +259,8 @@
 
 
 
-		<div class="imgCereals" id="imgCereals">
+		<div class="imgBeverages" id="imgCereals">
+			<h1>Cereals</h1>
 			<div class="fila1">
 				<div class="img">
 					<img src="IMG-PRODUCTOS/IMG22.jpg" alt="" id="22">
@@ -282,7 +290,8 @@
 
 
 
-		<div class="imgMeat" id="imgMeat">
+		<div class="imgBeverages" id="imgMeat">
+			<h1>Meat</h1>
 			<div class="fila1">
 				<div class="img">
 					<img src="IMG-PRODUCTOS/IMG9.jpg" alt="" id="9">
@@ -309,7 +318,8 @@
 
 
 
-		<div class="imgProduce" id="imgProduce">
+		<div class="imgBeverages" id="imgProduce">
+			<h1>Produce</h1>
 			<div class="fila1">
 				<div class="img">
 					<img src="IMG-PRODUCTOS/IMG7.jpg" alt="" id="7">
