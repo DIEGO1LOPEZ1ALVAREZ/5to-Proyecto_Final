@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+    font-size: 3em;
+}
+
+/* Menu */
+.tit{
+    display: flex;
+    margin-left: 12%;
+}
+.tit p{
+    padding-left: 500px;
+}
+.tdId{
+    font-size: 2em;
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    background: #00b386;
+}
+.tdTitle{
+    font-size: 2em;
+    text-align: center;
+    width: 450px;
+    background: #00b386;
+}
+.tdName{
+    text-align: center;
+    width: 300px;
+    background: #00b386;
+    font-size: 2em;
+}
+.tdCountry{
+    text-align: center;
+    width: 150px;
+    background: #00b386;
+    font-size: 2em;
+}
+.tdOrder{
+    text-align: center;
+    width: 150px;
+    background: #00b386;
+    font-size: 2em;
+}
+.tdAmount{
+    text-align: center;
+    width: 275px;
+    background: #00b386;
+    font-size: 2em;
+}
+/* Contendedor */
+.datos{
+    background: #cbfaee;
+    width: 1450px;
+    text-align: justify;
+    font-size: 1.8em;
+}
+/* Columna id */
+.id{
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    background: #e3f5f0;
+}
+/* Columna titulo */
+.titulo{
+    text-align: justify;
+    width: 450px;
+    background: #e3f5f0;
+}
+/* Columna nombre */
+.nombre{
+    text-align: justify;
+    width: 300px;
+    background: #e3f5f0;
+}
+/* Columna pais */
+.pais{
+    text-align: center;
+    width: 150px;
+    background: #e3f5f0;
+}
+/* Columna ordenes */
+.ordenes{
+    text-align: center;
+    width: 150px;
+    background: #e3f5f0;
+}
+/* Columna monto */
+.monto{
+    text-align: center;
+    width: 280px;
+    background: #e3f5f0;
+}
+
+.inicio{
+    width: 50%;
+}

@@ -55,6 +55,6 @@
 	<script src="plugins/sweetaler2/sweetalert2.all.min.js"></script>
 
 
-	<script type="text/javascript" src="shippers.js"></script>
+	<script type="text/javascript" src="JS/shippers.js"></script>
 </body>
 </html>

@@ -70,6 +70,6 @@
 	<!--Sweetalert 2-->
 	<script src="plugins/sweetaler2/sweetalert2.all.min.js"></script>
 
-	<script type="text/javascript" src="customers.js"></script>
+	<script type="text/javascript" src="JS/customers.js"></script>
 </body>
 </html>

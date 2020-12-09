@@ -18,7 +18,7 @@ function mostrarCondiments(){
     document.getElementById("imgCondiments").style.display="block";
     document.getElementById("imgBeverages").style.display="none";
     document.getElementById("imgConfections").style.display="none";
-    document.getElementById("imgCDairyProducts").style.display="none";
+    document.getElementById("imgDairyProducts").style.display="none";
     document.getElementById("imgCereals").style.display="none";
     document.getElementById("imgMeat").style.display="none";
     document.getElementById("imgProduce").style.display="none";
@@ -63,7 +63,7 @@ function mostrarMeat()
 	document.getElementById("imgBeverages").style.display="none";
 	document.getElementById("imgProduce").style.display="none";
 }
-function mostrarProduce
+function mostrarProduce()
 {
 	document.getElementById("imgProduce").style.display="block";
 	document.getElementById("imgMeat").style.display="none";

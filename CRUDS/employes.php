@@ -79,6 +79,6 @@
 	<!--Sweetalert 2-->
 	<script src="plugins/sweetaler2/sweetalert2.all.min.js"></script>
 
-	<script type="text/javascript" src="employes.js"></script>
+	<script type="text/javascript" src="JS/employes.js"></script>
 </body>
 </html>
