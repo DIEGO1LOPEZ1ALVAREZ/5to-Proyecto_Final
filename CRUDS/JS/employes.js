@@ -1,5 +1,5 @@
 //VARIABLE QUE ME DICE DONDE ESTA EL CRUD
-var url = "bd/crud_employes.php"
+var url = "../CRUDS/crud_employes.php"
 
 //CREO UNA VARIABLE DE VUE.JS PARA MANEJAR EL SWEETALERT Y EL CRUD_EMPLOYES.PHP
 var appEmployees = new Vue({
