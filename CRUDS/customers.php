@@ -6,15 +6,19 @@
 
 	<!--Sweet Alert 2-->
 	<link rel="stylesheet" href="plugins/sweetaler2/sweetalert2.min.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/estilo_cruds.css">
 	<title>Customers</title>
 </head>
 
 <body>
 
-	<div id="appCustomers">
-		<input type="button" value="Agregar!" @click="btnAlta">
+	<center><h1>E M P L O Y E S</h1></center>
+	<hr class="inicio"><br>
 
-		<table border="1">
+	<div id="appCustomers">
+		<input type="button" value="Agregar!" @click="btnAlta" class="btnAgregar">
+
+		<table>
 			<thead>
 				<tr>
 					<th>CustomerID</th>
@@ -46,8 +50,8 @@
 					<td>{{customer.Fax}}</td>
 
 					<td>
-						<input type="button" value="editar" @click="btnEditar(customer.CustomerID, customer.CompanyName, customer.ContactName, customer.ContactTitle, customer.Address, customer.City, customer.Region, customer.PostalCode, customer.Country, customer.Phone, customer.Fax)">
-						<input type="button" value="borrar" @click="btnBorrar(customer.CustomerID)">
+						<input type="button" value="editar" @click="btnEditar(customer.CustomerID, customer.CompanyName, customer.ContactName, customer.ContactTitle, customer.Address, customer.City, customer.Region, customer.PostalCode, customer.Country, customer.Phone, customer.Fax)"class="btnEditar">
+						<input type="button" value="borrar" @click="btnBorrar(customer.CustomerID)"class="btnBorrar">
 					</td>
 				</tr>
 			</tbody>

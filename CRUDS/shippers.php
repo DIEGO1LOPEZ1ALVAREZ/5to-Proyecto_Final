@@ -6,15 +6,19 @@
 
 	<!--Sweet Alert 2-->
 	<link rel="stylesheet" href="plugins/sweetaler2/sweetalert2.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../CSS/estilo_cruds.css">
 	<title>Shippers</title>
 </head>
 
 <body>
 
+	<center><h1>S H I P P E R S</h1></center>
+	<hr class="inicio"><br>
 	<div id="appShippers">
-		<input type="button" value="Agregar!" @click="btnAlta">
+		<input type="button" value="Agregar!" @click="btnAlta" class="btnAgregar">
 
-		<table border="1">
+		<table>
 			<thead>
 				<tr>
 					<th>ShipperID</th>
@@ -29,9 +33,9 @@
 					<td>{{shipper.CompanyName}}</td>
 					<td>{{shipper.Phone}}</td>
 
-					<td>
-						<input type="button" value="editar" @click="btnEditar(shipper.ShipperID, shipper.CompanyName, shipper.Phone)">
-						<input type="button" value="borrar" @click="btnBorrar(shipper.ShipperID)">
+					<td><center>
+						<input type="button" value="Editar" @click="btnEditar(shipper.ShipperID, shipper.CompanyName, shipper.Phone)"class="btnEditar">
+						<input type="button" value="Borrar" @click="btnBorrar(shipper.ShipperID)"class="btnBorrar"></center>
 					</td>
 				</tr>
 			</tbody>
