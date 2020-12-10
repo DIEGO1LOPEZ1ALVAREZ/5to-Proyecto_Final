@@ -11,26 +11,26 @@
 
 <body>
 
-	<div id="appCustomers">
+	<div id="appCategories">
 		<input type="button" value="Agregar!" @click="btnAlta">
 
 		<table border="1">
 			<thead>
 				<tr>
-					<th>CategoriID</th>
-					<th>CategoriName</th>
+					<th>CategoryID</th>
+					<th>CategoryName</th>
 					<th>Description</th>
 				</tr>
 			</thead>
 
 			<tbody>
 				<tr v-for="categori of Categories">
-					<td>{{categori.CategoriId}}</td>
-					<td>{{categori.CategoriName}}</td>
+					<td>{{categori.CategoryId}}</td>
+					<td>{{categori.CategoryName}}</td>
 					<td>{{categori.Description}}</td>
 					<td>
-						<input type="button" value="editar" @click="btnEditar(customer.CustomerID, customer.CompanyName, customer.ContactName, customer.ContactTitle, customer.Address, customer.City, customer.Region, customer.PostalCode, customer.Country, customer.Phone, customer.Fax)">
-						<input type="button" value="borrar" @click="btnBorrar(customer.CustomerID)">
+						<input type="button" value="editar" @click="btnEditar(categori.CategoryId,categori.CategoryName,categori.Description)">
+						<input type="button" value="borrar" @click="btnBorrar(categori.CategoryId)">
 					</td>
 				</tr>
 			</tbody>
@@ -53,6 +53,6 @@
 	<!--Sweetalert 2-->
 	<script src="plugins/sweetaler2/sweetalert2.all.min.js"></script>
 
-	<script type="text/javascript" src="Categori.js"></script>
+	<script type="text/javascript" src="JS/Categories.js"></script>
 </body>
 </html>

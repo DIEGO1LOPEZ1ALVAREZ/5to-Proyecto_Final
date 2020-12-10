@@ -6,12 +6,12 @@
 
 	<!--Sweet Alert 2-->
 	<link rel="stylesheet" href="plugins/sweetaler2/sweetalert2.min.css">
-	<title>Categories</title>
+	<title>Suppliers</title>
 </head>
 
 <body>
 
-	<div id="appCustomers">
+	<div id="appSuppliers">
 		<input type="button" value="Agregar!" @click="btnAlta">
 
 		<table border="1">
@@ -36,8 +36,8 @@
 				<tr v-for="supplier of Suppliers">
 					<td>{{supplier.SupplierID}}</td>
 					<td>{{supplier.CompanyName}}</td>
-					<td>{{supplier.ContacName}}</td>
-					<td>{{supplier.ContacTitle}}</td>
+					<td>{{supplier.ContactName}}</td>
+					<td>{{supplier.ContactTitle}}</td>
 					<td>{{supplier.Address}}</td>
 					<td>{{supplier.City}}</td>
 					<td>{{supplier.Region}}</td>
@@ -48,8 +48,8 @@
 					<td>{{supplier.HomePage}}</td>
 					
 					<td>
-						<input type="button" value="editar" @click="btnEditar(customer.CustomerID, customer.CompanyName, customer.ContactName, customer.ContactTitle, customer.Address, customer.City, customer.Region, customer.PostalCode, customer.Country, customer.Phone, customer.Fax)">
-						<input type="button" value="borrar" @click="btnBorrar(customer.CustomerID)">
+						<input type="button" value="editar" @click="btnEditar(supplier.CompanyName, supplier.ContactName, supplier.ContactTitle, supplier.Address, supplier.City, supplier.Region, supplier.PostalCode, supplier.Country, supplier.Phone, supplier.Fax)">
+						<input type="button" value="borrar" @click="btnBorrar(supplier.SupplierID)">
 					</td>
 				</tr>
 			</tbody>
@@ -72,6 +72,6 @@
 	<!--Sweetalert 2-->
 	<script src="plugins/sweetaler2/sweetalert2.all.min.js"></script>
 
-	<script type="text/javascript" src="Suppliers.js"></script>
+	<script type="text/javascript" src="JS/Suppliers.js"></script>
 </body>
 </html>

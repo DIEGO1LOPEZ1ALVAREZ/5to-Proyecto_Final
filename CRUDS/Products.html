@@ -6,12 +6,12 @@
 
 	<!--Sweet Alert 2-->
 	<link rel="stylesheet" href="plugins/sweetaler2/sweetalert2.min.css">
-	<title>Categories</title>
+	<title>Products</title>
 </head>
 
 <body>
 
-	<div id="appCustomers">
+	<div id="appProducts">
 		<input type="button" value="Agregar!" @click="btnAlta">
 
 		<table border="1">
@@ -19,11 +19,9 @@
 				<tr>
 					<th>ProductId</th>
 					<th>ProducName</th>
-					<th>SupplierID</th>
-					<th>CategoriID</th>
 					<th>QuantityPerUnit</th>
 					<th>UnitPrice</th>
-					<th>UnitslnStock</th>
+					<th>UnitsInStock</th>
 					<th>UnitsOnOrder</th>
 					<th>ReorderLevel</th>
 					<th>Discontinued</th>
@@ -34,18 +32,16 @@
 				<tr v-for="product of Products">
 					<td>{{product.ProducID}}</td>
 					<td>{{product.ProductName}}</td>
-					<td>{{product.SupplierID}}</td>
-					<td>{{product.CategoriID}}</td>
 					<td>{{product.QuantityPerUnit}}</td>
 					<td>{{product.UnitPrice}}</td>
-					<td>{{product.UnitlnStock}}</td>
-					<td>{{product.}UnitsOnOrder}</td>
+					<td>{{product.UnitInStock}}</td>
+					<td>{{product.UnitsOnOrder}}</td>
 					<td>{{product.ReorderLevel}}</td>
 					<td>{{product.Discontinued}}</td>
 					
 					<td>
-						<input type="button" value="editar" @click="btnEditar(customer.CustomerID, customer.CompanyName, customer.ContactName, customer.ContactTitle, customer.Address, customer.City, customer.Region, customer.PostalCode, customer.Country, customer.Phone, customer.Fax)">
-						<input type="button" value="borrar" @click="btnBorrar(customer.CustomerID)">
+						<input type="button" value="editar" @click="btnEditar(product.ProducID,product.ProductName,product.QuantityPerUnit,product.UnitPrice,product.UnitlnStock,product.UnitsOnOrder,product.ReorderLevel,product.Discontinued)">
+						<input type="button" value="borrar" @click="btnBorrar(product.ProducID)">
 					</td>
 				</tr>
 			</tbody>
@@ -68,6 +64,6 @@
 	<!--Sweetalert 2-->
 	<script src="plugins/sweetaler2/sweetalert2.all.min.js"></script>
 
-	<script type="text/javascript" src="Producs.js"></script>
+	<script type="text/javascript" src="JS/Producs.js"></script>
 </body>
 </html>

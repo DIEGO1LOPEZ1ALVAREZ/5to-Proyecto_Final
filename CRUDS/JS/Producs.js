@@ -1,53 +1,50 @@
-var url= "Crudproducts.php";
+//VARIABLE QUE ME DICE DONDE ESTA EL CRUD
+var url = "../CRUDS/Crudproducts.php"
 
+//CREO UNA VARIABLE DE VUE.JS PARA MANEJAR EL SWEETALERT Y EL CRUD_CUSTOMERS
 var appProducts = new Vue({
-	el: "#appProducts",
+	el: '#appProducts',
 	data:{
-		products:[],
-		ProducName:"",
-		SuplierID:"",
-		CategoriID:"",
+		Products:[],
+		ProductID:"",
+		ProductName:"",
 		QuantityPerUnit:"",
 		UnitPrice:"",
-		UnitslnStock:"",
+		UnitsInStock:"",
 		UnitsOnOrder:"",
-		ReorderLevel:"",
-		Discontinued :""
+		Reorderlevel:"",
+		Discontinued:""
 	},
 	methods:
 	{
-		//BOTONES
+		//MUESTRA UN FORMULARIO PARA ENVIAR DATOS A altaCustomers
 		btnAlta: async function()
 		{
-			const{value: formValues} = await Swal.fire({
-				title: 'NUEVO',
+			await Swal.fire({
+				title: "Nuevo",
 				html:
-				'<div class="row"><label class="col-sm-3 col-form-label">ProducName</label><div class="col-sm-7"><input id="ProducName" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">SuplierID</label><div class="col-sm-7"><input id="SuplierID" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">QuantityPerUnit</label><div class="col-sm-7"><input id="QuantityPerUnit" type="number" min="0" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">UnitPrice </label><div class="col-sm-7"><input id="UnitPrice" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">UnitslnStock</label><div class="col-sm-7"><input id="UnitslnStock" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">UnitsOnOrder</label><div class="col-sm-7"><input id="UnitsOnOrder" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">ReorderLevel</label><div class="col-sm-7"><input id="ReorderLevel" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Discontinued</label><div class="col-sm-7"><input id="Discontinued" type="text" class="form-control"></div></div>',
-				focusConfirm: false,
+				"<label>ProductName: <input type='text' id='ProductName'></label> <br><label>QuantityPerUnit: <input type='text' id='QuantityPerUnit'></label>  <br><label>UnitPrice: <input type='text' id='UnitPrice'></label>  <br><label>UnitsInStock: <input type='text' id='UnitsInStock'></label>  <br><label>UnitsOnOrder: <input type='text' id='UnitsOnOrder'></label>  <br><label>Reorderlevel: <input type='text' id='Reorderlevel'></label>  <br><label>Discontinued: <input type='text' id='Discontinued'></label>",
 				showCancelButton: true,
 				confirmButtonText: 'Guardar',
 				confirmButtonColor: '#1cc88a',
 				cancelButtonColor: '#3085d6',
-				preConfirm: () => {
-					return [
-						this.ProducName = document.getElementById('ProducName').value,
-						//this.SuplierID = document.getElementById(' ').value,
-						//this.CategoriID = document.getElementById(' ').value,
+				preConfirm: () =>{
+					return[
+						this.ProductName = document.getElementById('ProductName').value,
 						this.QuantityPerUnit = document.getElementById('QuantityPerUnit').value,
 						this.UnitPrice = document.getElementById('UnitPrice').value,
-						this.UnitslnStock = document.getElementById('UnitslnStock').value,
+						this.UnitsInStock = document.getElementById('UnitsInStock').value,
 						this.UnitsOnOrder = document.getElementById('UnitsOnOrder').value,
-						this.ReorderLevel = document.getElementById('ReorderLevel').value,
+						this.Reorderlevel = document.getElementById('Reorderlevel').value,
 						this.Discontinued = document.getElementById('Discontinued').value,
 					]
 				}
 			})
-			if (this.ProducName == "" || this.SuplierID == "" || this.CategoriID == "" || this.QuantityPerUnit == "" || UnitPrice == "" || this.UnitslnStock == "" || UnitsOnOrder == "" || ReorderLevel == "" || Discontinued == "")
+			if (this.ProductName =="" || this.QuantityPerUnit == "" || this.UnitPrice == "" || this.UnitsInStock == "" || this.UnitsOnOrder == "" || this.Reorderlevel == "" || this. Discontinued == "") 
 			{
 				Swal.fire({
-					type: 'info',
-					title: 'Datos incompletos',
-				})
+				icon: 'warning',
+				title: 'Datos incompletos'})
 			}
 			else
 			{
@@ -56,104 +53,119 @@ var appProducts = new Vue({
 					toast: true,
 					position: 'top-end',
 					showConfirmButton: false,
-					timer: 300
+					timer: 3000
 				});
 				Toast.fire({
 					type: 'success',
 					title: 'Producto Agregado!'
 				})
-			}},
-		btnEditar: async function(id , ProducName,QuantityPerUnit,UnitPrice,UnitslnStock,ReorderLevel,Discontinued )
+			}
+
+		},
+
+		btnEditar: async function()
 		{
 			await Swal.fire({
-				title: 'EDITAR',
+				title:"Editar",
 				html:
-				'<div class="row"><label class="col-sm-3 col-form-label">ProducName</label><div class="col-sm-7"><input id="ProducName" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">SuplierID</label><div class="col-sm-7"><input id="SuplierID" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">QuantityPerUnit</label><div class="col-sm-7"><input id="QuantityPerUnit" type="number" min="0" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">UnitPrice </label><div class="col-sm-7"><input id="UnitPrice" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">UnitslnStock</label><div class="col-sm-7"><input id="UnitslnStock" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">UnitsOnOrder</label><div class="col-sm-7"><input id="UnitsOnOrder" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">ReorderLevel</label><div class="col-sm-7"><input id="ReorderLevel" type="text" class="form-control"></div></div><div class="row"><label class="col-sm-3 col-form-label">Discontinued</label><div class="col-sm-7"><input id="Discontinued" type="text" class="form-control"></div></div>',
+				"<label>ProductName: <input type='text' id='ProductName' value="+ProductName+"></label><br><label>SupplierID: <input type='text' id='SupplierID' value="+SupplierID+"></label>  <br><label>CategoryID: <input type='text' id='CategoryID' value="+CategoryID+"></label>  <br><label>QuantityPerUnit: <input type='text' id='QuantityPerUnit' value="+QuantityPerUnit+"></label>  <br><label>UnitPrice: <input type='text' id='UnitPrice' value="+UnitPrice+"></label>  <br><label>UnitsInStock: <input type='text' id='UnitsInStock' value="+UnitsInStock+"></label>  <br><label>UnitsOnOrder: <input type='text' id='UnitsOnOrder' value="+UnitsOnOrder+"></label>  <br><label>Reorderlevel: <input type='text' id='Reorderlevel' value="+Reorderlevel+"></label>  <br><label>Discontinued: <input type='text' id='Discontinued' value="+Discontinued+"></label>",
 				focusConfirm: false,
-				showCancelButton: true,
-			}).then((result) => {
-				if (result.value) {
-					this.ProducName = document.getElementById('ProducName').value,
-						//this.SuplierID = document.getElementById(' ').value,
-						//this.CategoriID = document.getElementById(' ').value,
-						this.QuantityPerUnit = document.getElementById('QuantityPerUnit').value,
-						this.UnitPrice = document.getElementById('UnitPrice').value,
-						this.UnitslnStock = document.getElementById('UnitslnStock').value,
-						this.UnitsOnOrder = document.getElementById('UnitsOnOrder').value,
-						this.ReorderLevel = document.getElementById('ReorderLevel').value,
-						this.Discontinued = document.getElementById('Discontinued').value,
-					this.editarProducts(ProducName,QuantityPerUnit,UnitPrice,UnitslnStock,ReorderLevel,Discontinued);
+				showCancelButton: true
+			}).then((result) =>{
+				if (result.value) 
+				{
+
+					ProductName = document.getElementById('ProductName').value,
+					QuantityPerUnit = document.getElementById('QuantityPerUnit').value,
+					UnitPrice = document.getElementById('UnitPrice').value,
+					UnitsInStock = document.getElementById('UnitsInStock').value,
+					UnitsOnOrder = document.getElementById('UnitsOnOrder').value,
+					Reorderlevel = document.getElementById('Reorderlevel').value,
+					Discontinued = document.getElementById('Discontinued').value,
+
+					this.editarProducts(ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, Reorderlevel, Discontinued);
 					Swal.fire(
 						'!Actualizado!',
 						'El registro ha sido actualizado',
 						'success'
-						)
+					)
 				}
-			})},
-		btnBorrar: function(id)
+			})
+		},
+
+		btnBorrar: function(ProductID)
 		{
 			Swal.fire({
-				title: 'Esta seguro de borrar el registro: '+ id + " ?",
-				type: 'warning',
+				title: 'Esta seguro de borrar el registro: '+ ProductID +'?',
+				icon: 'warning',
 				showCancelButton: true,
 				confirmButtonColor: '#d33',
 				cancelButtonColor: '#3085d6',
 				confirmButtonText: 'Borrar'
-			}).then((result) => {
+			}).then((result) =>{
 				if (result.value) 
 				{
-					this.borrarMovil(id);
+					this.borrarProducts(CategoryID);
 					Swal.fire(
 						'!Eliminado!',
 						'El registro ha sido borrado.',
 						'success'
 					)
 				}
-			})},	
-		//----------------------------------------------
-		// Funcion para listar productos
+			})
+		},
+
+		/*METODOS PARA ENVIAR AL CRUD_EMPLOYES.PHP
+						|
+						|
+						|
+						|
+						|
+						V
+		*/
+
+		//ENVIA AL PHP LOS DATOS RESULTANTES DE LA FUNCION btnAlta
+		altaProducts: function()
+		{
+			axios.post(url,{opcion:1, ProductID:this.ProductID, ProductName:this.ProductName, SupplierID:this.SupplierID, CategoryID:this.CategoryID, QuantityPerUnit:this.QuantityPerUnit, UnitPrice:this.UnitPrice, UnitsInStock:this.UnitsInStock, UnitsOnOrder:this.UnitsOnOrder, Reorderlevel:this.Reorderlevel, Discontinued:this.Discontinued}).then(response =>{
+				this.listarProducts();
+			})
+
+						this.ProductName = "";
+						this.QuantityPerUnit = "";
+						this.UnitPrice = "";
+						this.UnitsInStock = "";
+						this.UnitsOnOrder = "";
+						this.Reorderlevel = "";
+						this.Discontinued = "";
+
+		},
+
+		//EDITA LAS CELDAS, RECIBE PARAMETROS Y LOS ENVIA AL PHP
+		editarProducts: function(ProductID, ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, Reorderlevel, Discontinued)
+		{
+			axios.post(url,{opcion:2, ProductID:ProductID, ProductName:ProductName, QuantityPerUnit:QuantityPerUnit, UnitPrice:UnitPrice, UnitsInStock:UnitsInStock, UnitsOnOrder:UnitsOnOrder, Reorderlevel:Reorderlevel, Discontinued:Discontinued}).then(response =>{
+				this.listarProducts();
+			})
+		},
+
+		borrarProducts: function(ProductID)
+		{
+			axios.post(url,{opcion:3, ProductID:ProductID}).then(response =>{
+				this.listarProducts();
+			});
+		},
+
+		//LLAMA E IMPRIME EN LA PANTALLA LOS DATOS DE LA BASE DE DATOS
 		listarProducts: function()
 		{
 			axios.post(url,{opcion:4}).then(response =>{
-				this.products = response.data;
-				//console.log (this.moviles);
+				this.Products = response.data;
 			});
-		},
-
-		altaProducts: function()
-		{
-			axios.post(url,{opcion:1,ProducName:this.ProducName, QuantityPerUnit:this.QuantityPerUnit, UnitPrice:this.UnitPrice, UnitslnStock:this.UnitslnStock, ReorderLevel:this.ReorderLevel, Discontinued:this.Discontinued}).then(response =>{
-				this.listarProducts();
-			});
-			this.ProducName="";
-			this.QuantityPerUnit="";
-			this.UnitPrice="";
-			this.UnitslnStock="";
-			this.ReorderLevel="";
-			this.Discontinued="";
-
-		},
-
-		editarProducts: function(id,ProducName,QuantityPerUnit,UnitPrice,UnitslnStock,ReorderLevel,Discontinued)
-		{
-			axios.post(url,{opcion:2,ProducName:ProducName, QuantityPerUnit:QuantityPerUnit, UnitPrice:UnitPrice, UnitslnStock:UnitslnStock, ReorderLevel:ReorderLevel, Discontinued:Discontinued}).then(response =>{
-				this.listarProducts();
-			});
-		},
-
-		borrarProducts: function(id)
-		{
-			axios.post(url,{opcion:3, id:id}).then(response =>{
-				this.listarProducts();
-			});
-		},				
+		},	
 	},
 	created: function()
 	{
-		this.listarProducts(); 
-	},
-	computed:
-	{
-
-	}
-});
+		this.listarProducts();
+	}	
+})

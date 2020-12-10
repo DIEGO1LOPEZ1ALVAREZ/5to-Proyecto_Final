@@ -13,7 +13,7 @@ $SuplierId = (isset($_POST['SuplierId'])) ? $_POST['SuplierId'] : '';
 $categoriID = (isset($_POST['categoriID'])) ? $_POST['categoriID'] : '';
 $QuantityPerUnit = (isset($_POST['QuantityPerUnit'])) ? $_POST['QuantityPerUnit'] : '';
 $UnitPrice = (isset($_POST['UnitPrice'])) ? $_POST['UnitPrice'] : '';
-$UnitslnStock = (isset($_POST['UnitslnStock'])) ? $_POST['UnitslnStock'] : '';
+$UnitsInStock = (isset($_POST['UnitsInStock'])) ? $_POST['UnitsInStock'] : '';
 $UnitsOnOrder = (isset($_POST['UnitsOnOrder'])) ? $_POST['UnitsOnOrder'] : '';
 $ReorderLevel = (isset($_POST['ReorderLevel'])) ? $_POST['ReorderLevel'] : '';
 $Discontinued = (isset($_POST['Discontinued'])) ? $_POST['Discontinued'] : '';
@@ -21,13 +21,13 @@ $Discontinued = (isset($_POST['Discontinued'])) ? $_POST['Discontinued'] : '';
 switch ($opcion) 
      {
         case 1://alta
-            $consulta = "INSERT INTO Products (ProductName, QuantityPerUnit, UnitPrice, UnitslnStock, UnitsOnOrder, ReorderLevel, Discontinued) VALUES('$ProductName', '$QuantityPerUnit, '$UnitPrice', '$UnitslnStock', '$UnitsOnOrder', '$ReorderLevel', '$Discontinued') ";
+            $consulta = "INSERT INTO Products (ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued) VALUES('$ProductName', '$QuantityPerUnit, '$UnitPrice', '$UnitsInStock', '$UnitsOnOrder', '$ReorderLevel', '$Discontinued') ";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
         break;
 
         case 2://modificacion
-            $consulta = "UPDATE Products SET ProductName='$ProductName', QuantityPerUnit='$QuantityPerUnit', UnitPrice='$UnitPrice', UnitslnStock='$UnitslnStock', UnitsOnOrder='$UnitsOnOrder', ReorderLevel='$ReorderLevel',Discontinued='$Discontinued' ";
+            $consulta = "UPDATE Products SET ProductName='$ProductName', QuantityPerUnit='$QuantityPerUnit', UnitPrice='$UnitPrice', UnitsInStock='$UnitsInStock', UnitsOnOrder='$UnitsOnOrder', ReorderLevel='$ReorderLevel',Discontinued='$Discontinued' ";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
             $data=$resultado->fetchALL(PDO::FETCH_ASSOC);
@@ -40,7 +40,7 @@ switch ($opcion)
         break;
 
         case 4://listar
-            $consulta = "SELECT ProductName, QuantityPerUnit, UnitPrice, UnitslnStock, UnitsOnOrder, ReorderLevel, Discontinued FROM Products";
+            $consulta = "SELECT ProductID, ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued FROM Products";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
             $data=$resultado->fetchALL(PDO::FETCH_ASSOC);
