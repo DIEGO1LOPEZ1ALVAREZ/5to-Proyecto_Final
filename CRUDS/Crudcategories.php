@@ -7,35 +7,35 @@
 $_POST = json_decode(file_get_contents("php://input"), true);
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
-$id = (isset($_POST['categoriID'])) ? $_POST['categoriID'] : '';
-$categoriName = (isset($_POST['categoriName'])) ? $_POST['categoriName'] : '';
+//declaro las variables para llamarlas en la base de datos
+$CategoryID = (isset($_POST['CategoryID'])) ? $_POST['CategoryID'] : '';
+$CategoryName = (isset($_POST['CategoryName'])) ? $_POST['CategoryName'] : '';
 $Description = (isset($_POST['Description'])) ? $_POST['Description'] : '';
-$Picture= (isset($_POST['Picture'])) ? $_POST['Picture'] : '';
 
 
 switch ($opcion) 
      {
         case 1://alta
-            $consulta = "INSERT INTO categories (categoriName, Description, Picture) VALUES('$categoriName, '$Description', '$Picture') ";
+            $consulta = "INSERT INTO categories (CategoryName, Description) VALUES ('$CategoryName, '$Description') ";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
         break;
 
         case 2://modificacion
-            $consulta = "UPDATE categories SET categoriName='$categoriName', Description='$Description', Picture='$Picture' WHERE categoriID='$id' ";
+            $consulta = "UPDATE categories SET CategoryName='$CategoryName', Description='$Description' WHERE CategoryID='$CategoryID' ";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
             $data=$resultado->fetchALL(PDO::FETCH_ASSOC);
         break;
 
         case 3://borrar
-            $consulta = "DELETE FROM categories  WHERE categoriID='$id' ";
+            $consulta = "DELETE FROM categories  WHERE CategoryID='$CategoryID' ";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
         break;
 
         case 4://listar
-            $consulta = "SELECT categoriID, categoriName, Description, Picture FROM categories";
+            $consulta = "SELECT CategoryID, CategoryName, Description FROM categories";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
             $data=$resultado->fetchALL(PDO::FETCH_ASSOC);
