@@ -14,7 +14,7 @@
 		<header>
 		<!-- Logo e iconos del modo oscuro -->
 			<div class="contenedor">
-				<img src="IMG/logolucky.jpg" id="logo">
+				<img src="IMG-PRODUCTOS/logolucky.jpg" id="logo">
 		<!-- Barra de buscar -->
 				<form>
 					<fieldset>
@@ -58,7 +58,7 @@
 			<a href="javascript: mostrarCereals();">Grains / Cereals</a>
 			<a href="javascript: mostrarMeat();">Meat / Poultry</a>
 			<a href="javascript: mostrarProduce();">Produce</a>	
-
+			<a href="CRUDS/listacruds.html">CRUDS</a>
 		</div>
 			
 			

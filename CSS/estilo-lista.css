@@ -1,0 +1,19 @@
+a
+{
+	text-decoration: none; 
+	color: black;
+	font-size: 60px;
+	font-family: arial;
+}
+
+a:hover
+{
+	color: blue;
+	cursor: pointer;
+}
+
+.menu
+{
+	margin-top: 220px;
+	margin-left: 595px;
+}
