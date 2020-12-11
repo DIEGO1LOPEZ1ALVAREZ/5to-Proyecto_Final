@@ -17,6 +17,7 @@
             <input type="button" value="Crear nueva orden" @click="btnAgregar">
             <table border="1">
                 <thead>
+                    <!-- Encabezado de la tabla. -->
                     <tr>
                         <th>ID Orden</th>
                         <th>ID Cliente</th>
@@ -35,6 +36,7 @@
                 </thead>
 
                 <tbody>
+                    <!-- Cuerpo de la tabla donde los datos serán cargados con vuejs -->
                     <tr v-for="orden of orders">
                         <td>{{orden.OrderID}}</td>
                         <td>{{orden.CustomerID}}</td>

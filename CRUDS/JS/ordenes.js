@@ -79,6 +79,105 @@ const appVerOrden = Pagina != "Listar" ? null : new Vue({
 
 // Constante que se encargara de tomar y procesar los elementos de crear_ordenes.php
     // Si la variable que provee la página que carga este script, no es equivalente a "Crear", no habra ejecución.
-const appCrearOrden = Pagina != "Crear" ? null : new Vue({
-    el: '#appCrearOrden'
-});
+const appCrearOrden = Pagina != "Crear" ? null : () => {
+
+    // Utilizaremos jquery para poder ejecutar lo necesario.
+    $('#frmCrearOrden').submit( function(event) {
+        // Evitamos que la función ejecute sus valores default.
+        event.preventDefault();
+
+        // Declaramos las variables y tomamos sus valores con jquery.
+        var optCustomers, optEmployees, optShippers, dRequired, optProducts, txtQuantity;
+        var txtShipName, txtShipAddress, txtShipCity, txtShipRegion, txtShipPostalCode, txtShipCountry;
+
+        optCustomers = $.trim($("#optCustomers").val());
+        optEmployees = $.trim($("#optEmployees").val());
+        optShippers = $.trim($("#optShippers").val());
+        dRequired = $.trim($("#dRequired").val());
+        optProducts = $.trim($("#optProducts").val()).split(',');
+        txtQuantity = $.trim($("#txtQuantity").val());
+
+        // Debido a que la cantidad de productos es separada por una coma, es necesario esto para eliminar los espacios.
+        var txtTempQuantity = "";
+        for(var i = 0; i < txtQuantity.length; i++) {
+            txtTempQuantity += txtQuantity[i] != " " ? txtQuantity[i] : "";
+        }
+        txtQuantity = txtTempQuantity.split(',');
+
+        txtShipName = $.trim($("#txtShipName").val());
+        txtShipAddress = $.trim($("#txtShipAddress").val());
+        txtShipCity = $.trim($("#txtShipCity").val());
+        txtShipRegion = $.trim($("#txtShipRegion").val());
+        txtShipPostalCode = $.trim($("#txtShipPostalCode").val());
+        txtShipCountry = $.trim($("#txtShipCountry").val());
+
+        // Verificamos que ningún campo este vació.
+        if(dRequired == "" || (optProducts[0] == "" && optProducts.length == 1) || (txtQuantity[0] == "" && txtQuantity.length == 1) || txtShipName == ""
+        || txtShipAddress == "" || txtShipCity == "" || txtShipRegion == "" || txtShipPostalCode == "" || txtShipCountry == "") {
+            // Si hay, notificamos con Sweet alert que aún hay campos vacíos.
+            Swal.fire({
+                icon: 'warning',
+                type: 'warning',
+                title: 'No puede haber campos vacíos.'
+            });
+        }
+        else {
+            // Si completo la verificación de cliente, ahora verificaremos del lado del servidor.
+            axios.post('ordenes_handler.php', {apartado: Pagina, opcion: 'Verificar', optCustomers: optCustomers, optEmployees: optEmployees, optShippers: optShippers, 
+            dRequired: dRequired, optProducts: optProducts, txtQuantity: txtQuantity, txtShipName: txtShipName, txtShipAddress: txtShipAddress, txtShipCity: txtShipCity, 
+            txtShipRegion: txtShipRegion, txtShipPostalCode: txtShipPostalCode, txtShipCountry: txtShipCountry}).then(response => {
+                // Verificamos que haya respuesta y que esta no sea un error.
+                if(response.data != null && response.data != 'Error') {
+                    // Verificamos si la respuesta indico que no hay campos vacíos.
+                    if(response.data == false) {
+                        // Si dice false significa que si hay campos vacíos.
+                        Swal.fire({
+                            icon: 'error',
+                            type: 'error',
+                            title: 'Datos faltantes o erroneos.'
+                        });
+                    }
+                    else {
+                        // Si indica que es true, significa que no hay campos vacíos y que puede continuar.
+                        axios.post('ordenes_handler.php', {apartado: Pagina, opcion: 'Crear', optCustomers: optCustomers, optEmployees: optEmployees, optShippers: optShippers, 
+                        dRequired: dRequired, optProducts: optProducts, txtQuantity: txtQuantity, txtShipName: txtShipName, txtShipAddress: txtShipAddress, txtShipCity: txtShipCity, 
+                        txtShipRegion: txtShipRegion, txtShipPostalCode: txtShipPostalCode, txtShipCountry: txtShipCountry}).then(response => {
+                            // Verificamos que exista la respuesta y que no venga con un error.
+                            if(response.data != null && response.data != 'Error') {
+                                // Indicamos que se agrego el ítem exitosamente y al cerrar la ventana del Sweet alert lo mande de nuevo a la página de las ordenes.
+                                Swal.fire({
+                                    icon: 'success',
+                                    type: 'success',
+                                    title: 'Orden agragada'
+                                }).then((result) => {
+                                    if(result.value) {
+                                        window.location.href = 'ordenes.php';
+                                    }
+                                });
+                            }
+                            else {
+                                // Si la respuesta fue nula o con errores, indicamos que hubo un fallo al procesar los datos.
+                                Swal.fire({
+                                    icon: 'error',
+                                    type: 'error',
+                                    title: 'Hubo un fallo al procesar los datos.'
+                                });
+                            }
+                        });
+                    }
+                }
+                else {
+                    // Si la respuesta fue nula o con errores, indicamos que hubo un fallo al verificar los datos.
+                    Swal.fire({
+                        icon: 'error',
+                        type: 'error',
+                        title: 'Hubo un fallo al validar datos.'
+                    });
+                }
+            });
+        }
+    });
+};
+
+// Verificamos que la constante no sea nula, y si no es, ejecutamos su función.
+if(appCrearOrden != null) { appCrearOrden(); }
